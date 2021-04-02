@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		05858205261653DD008C875A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05858204261653DD008C875A /* AppDelegate.swift */; };
 		05858207261653DD008C875A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05858206261653DD008C875A /* SceneDelegate.swift */; };
-		05858209261653DD008C875A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05858208261653DD008C875A /* ViewController.swift */; };
 		0585820C261653DD008C875A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0585820A261653DD008C875A /* Main.storyboard */; };
 		0585820F261653DD008C875A /* notey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0585820D261653DD008C875A /* notey.xcdatamodeld */; };
 		05858211261653DE008C875A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05858210261653DE008C875A /* Assets.xcassets */; };
 		05858214261653DE008C875A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05858212261653DE008C875A /* LaunchScreen.storyboard */; };
+		058582222616FC4F008C875A /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058582212616FC4F008C875A /* NotesViewController.swift */; };
+		058582262616FDD1008C875A /* NoteEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058582252616FDD1008C875A /* NoteEditViewController.swift */; };
+		0585822A2617209C008C875A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058582292617209C008C875A /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05858201261653DD008C875A /* notey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05858201261653DD008C875A /* nottr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nottr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05858204261653DD008C875A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05858206261653DD008C875A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05858208261653DD008C875A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0585820B261653DD008C875A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0585820E261653DD008C875A /* notey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = notey.xcdatamodel; sourceTree = "<group>"; };
 		05858210261653DE008C875A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05858213261653DE008C875A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05858215261653DE008C875A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		058582212616FC4F008C875A /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		058582252616FDD1008C875A /* NoteEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewController.swift; sourceTree = "<group>"; };
+		058582292617209C008C875A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +46,7 @@
 		058581F8261653DD008C875A = {
 			isa = PBXGroup;
 			children = (
-				05858203261653DD008C875A /* notey */,
+				05858203261653DD008C875A /* nottr */,
 				05858202261653DD008C875A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,32 +54,58 @@
 		05858202261653DD008C875A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05858201261653DD008C875A /* notey.app */,
+				05858201261653DD008C875A /* nottr.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05858203261653DD008C875A /* notey */ = {
+		05858203261653DD008C875A /* nottr */ = {
 			isa = PBXGroup;
 			children = (
+				0585821E2616FB2A008C875A /* Models */,
+				0585821C2616FB1A008C875A /* Views */,
+				0585821D2616FB22008C875A /* Controllers */,
 				05858204261653DD008C875A /* AppDelegate.swift */,
 				05858206261653DD008C875A /* SceneDelegate.swift */,
-				05858208261653DD008C875A /* ViewController.swift */,
-				0585820A261653DD008C875A /* Main.storyboard */,
 				05858210261653DE008C875A /* Assets.xcassets */,
-				05858212261653DE008C875A /* LaunchScreen.storyboard */,
 				05858215261653DE008C875A /* Info.plist */,
-				0585820D261653DD008C875A /* notey.xcdatamodeld */,
 			);
-			path = notey;
+			path = nottr;
+			sourceTree = "<group>";
+		};
+		0585821C2616FB1A008C875A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0585820A261653DD008C875A /* Main.storyboard */,
+				05858212261653DE008C875A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0585821D2616FB22008C875A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				058582252616FDD1008C875A /* NoteEditViewController.swift */,
+				058582212616FC4F008C875A /* NotesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0585821E2616FB2A008C875A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0585820D261653DD008C875A /* notey.xcdatamodeld */,
+				058582292617209C008C875A /* CoreDataManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05858200261653DD008C875A /* notey */ = {
+		05858200261653DD008C875A /* nottr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05858218261653DE008C875A /* Build configuration list for PBXNativeTarget "notey" */;
+			buildConfigurationList = 05858218261653DE008C875A /* Build configuration list for PBXNativeTarget "nottr" */;
 			buildPhases = (
 				058581FD261653DD008C875A /* Sources */,
 				058581FE261653DD008C875A /* Frameworks */,
@@ -85,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = notey;
+			name = nottr;
 			productName = notey;
-			productReference = 05858201261653DD008C875A /* notey.app */;
+			productReference = 05858201261653DD008C875A /* nottr.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 058581FC261653DD008C875A /* Build configuration list for PBXProject "notey" */;
+			buildConfigurationList = 058581FC261653DD008C875A /* Build configuration list for PBXProject "nottr" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05858200261653DD008C875A /* notey */,
+				05858200261653DD008C875A /* nottr */,
 			);
 		};
 /* End PBXProject section */
@@ -140,9 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05858209261653DD008C875A /* ViewController.swift in Sources */,
+				0585822A2617209C008C875A /* CoreDataManager.swift in Sources */,
+				058582222616FC4F008C875A /* NotesViewController.swift in Sources */,
 				0585820F261653DD008C875A /* notey.xcdatamodeld in Sources */,
 				05858205261653DD008C875A /* AppDelegate.swift in Sources */,
+				058582262616FDD1008C875A /* NoteEditViewController.swift in Sources */,
 				05858207261653DD008C875A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +329,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.twttrio.notey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twttrio.nottr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,7 +348,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.twttrio.notey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twttrio.nottr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,7 +358,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		058581FC261653DD008C875A /* Build configuration list for PBXProject "notey" */ = {
+		058581FC261653DD008C875A /* Build configuration list for PBXProject "nottr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05858216261653DE008C875A /* Debug */,
@@ -335,7 +367,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05858218261653DE008C875A /* Build configuration list for PBXNativeTarget "notey" */ = {
+		05858218261653DE008C875A /* Build configuration list for PBXNativeTarget "nottr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05858219261653DE008C875A /* Debug */,
